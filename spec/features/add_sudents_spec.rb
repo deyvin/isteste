@@ -5,10 +5,11 @@ RSpec.feature "add students" do
 
         fill_in "Nome", with: "Deyvid Nascimento"
         fill_in "Número Registro", with: "201612345"
-        fill_in "Status", with: "active"
+        select "Active", from: "Status"
 
         click_on("Salvar")
 
-        expect(page).to have_content("cadastro realizado com sucesso")
+        expect(page).to have_content("cadastrado com sucesso")
     end
+
 end
