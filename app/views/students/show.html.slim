@@ -1,15 +1,16 @@
-p#notice = notice
+.well
+    p#notice = notice
 
-p
-  strong Name:
-  = @student.name
-p
-  strong Register number:
-  = @student.register_number
-p
-  strong Status:
-  = @student.status
+    p
+      strong Nome:
+      = @student.name
+    p
+      strong Número de registro:
+      = @student.register_number
+    p
+      strong Status:
+      = @student.status
 
-= link_to 'Edit', edit_student_path(@student)
-'|
-= link_to 'Back', students_path
+    = link_to 'Edit', edit_student_path(@student)
+    '|
+    = link_to 'Back', students_path

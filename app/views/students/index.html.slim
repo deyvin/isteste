@@ -1,10 +1,11 @@
-h1 Listing students
+= link_to 'Cadastrar Estudante', new_student_path,  class: 'btn btn-raised btn-success pull-right'
+h1 Estudantes Cadastrados
 
-table
+table class="table table-striped"
   thead
     tr
-      th Name
-      th Register number
+      th Nome
+      th Número do registro
       th Status
       th
       th
@@ -15,11 +16,9 @@ table
       tr
         td = student.name
         td = student.register_number
-        td = student.status
-        td = link_to 'Show', student
-        td = link_to 'Edit', edit_student_path(student)
-        td = link_to 'Destroy', student, data: {:confirm => 'Are you sure?'}, :method => :delete
+        td = I18n.t student.status
+        td = link_to 'Exibir', student
+        td = link_to 'Editar', edit_student_path(student)
+        td = link_to 'Apagar', student, data: {:confirm => 'Are you sure?'}, :method => :delete
 
 br
-
-= link_to 'New Student', new_student_path
