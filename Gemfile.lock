@@ -187,7 +187,6 @@ PLATFORMS
 DEPENDENCIES
   byebug
   capybara
-  coffee-rails (~> 4.1.0)
   enumerize
   jbuilder (~> 2.0)
   jquery-rails
