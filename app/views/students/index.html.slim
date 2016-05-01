@@ -19,6 +19,6 @@ table class="table table-striped"
         td = I18n.t student.status
         td = link_to 'Exibir', student
         td = link_to 'Editar', edit_student_path(student)
-        td = link_to 'Apagar', student, data: {:confirm => 'Are you sure?'}, :method => :delete
+        td = link_to 'Apagar', student, data: {:confirm => 'Deseja realmente apagar este estudante?'}, :method => :delete
 
 br
