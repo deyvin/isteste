@@ -12,5 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap.min
+//= require ripples.min
+//= require material.min
+//= require snackbar.min
 //= require turbolinks
 //= require_tree .
