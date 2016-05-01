@@ -5,7 +5,7 @@ RSpec.feature "students actions" do
 
         fill_in "Nome", with: "Deyvid Nascimento"
         fill_in "Número Registro", with: "201612345"
-        select "Ativo", from: "Status"
+        check "student[status]"
 
         click_on("Salvar")
 

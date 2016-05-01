@@ -9,8 +9,8 @@
           = @student.register_number
         p
           strong Status:
-          = @student.status
+          = status_humanize @student.status
 
-        = link_to 'Edit', edit_student_path(@student)
-        '|
-        = link_to 'Back', students_path
+        = link_to 'Editar', edit_student_path(@student), class: "btn btn-raised btn-success"
+
+        = link_to 'Voltar', students_path, class: "btn btn-raised btn-default pull-right"

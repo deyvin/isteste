@@ -61,8 +61,6 @@ GEM
     diff-lcs (1.2.5)
     enumerate_it (1.2.9)
       activesupport (>= 3.0.0)
-    enumerize (1.1.1)
-      activesupport (>= 3.2)
     erubis (2.7.0)
     execjs (2.6.0)
     factory_girl (4.7.0)
@@ -195,7 +193,6 @@ DEPENDENCIES
   byebug
   capybara
   enumerate_it
-  enumerize
   factory_girl_rails
   jbuilder (~> 2.0)
   jquery-rails
