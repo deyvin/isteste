@@ -1,0 +1,23 @@
+= link_to 'Cadastrar Curso', new_course_path,  class: 'btn btn-raised btn-success pull-right'
+h1 Cursos Cadastrados
+
+table class="table table-striped"
+  thead
+    tr
+      th Name
+      th Description
+      th Status
+      th
+      th
+      th
+
+  tbody
+    - @courses.each do |course|
+      tr
+        td = course.name
+        td = course.description
+        td = course.status
+        td = link_to 'Show', course
+        td = link_to 'Edit', edit_course_path(course)
+        td = link_to 'Destroy', course, data: {:confirm => 'Are you sure?'}, :method => :delete
+    
