@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem "responders"
 gem 'enumerize'
+gem 'enumerate_it'
 gem "slim-rails"
 
 group :development, :test do
