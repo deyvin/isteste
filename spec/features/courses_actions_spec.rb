@@ -12,6 +12,15 @@ RSpec.feature "courses actions" do
         expect(page).to have_content("cadastrado com sucesso")
     end
 
+    scenario "validation blank fields" do
+        visit new_course_path
+        click_on("Salvar")
+
+        expect(page).to have_content("Nome não pode ficar em branco")
+        expect(page).to have_content("Descrição não pode ficar em branco")
+
+    end
+
     scenario "user change course" do
         course = create(:course)
         visit course_path(course)
