@@ -26,6 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "responders"
 gem 'enumerate_it'
 gem "slim-rails"
+gem 'brazilian-rails'
 
 group :development, :test do
     gem 'rspec-rails', '~> 3.0'

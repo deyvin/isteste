@@ -1,0 +1,22 @@
+= link_to 'Vincular Aluno', new_classroom_path,  class: 'btn btn-raised btn-success pull-right'
+h1 Vínculos
+
+table class="table table-striped"
+  thead
+    tr
+      th Estudante
+      th Curso
+      th Data Entrada
+      th
+      th
+      th
+
+  tbody
+    - @classrooms.each do |classroom|
+      tr
+        td = classroom.student.name
+        td = classroom.course.name
+        td = classroom.entry_at.to_s_br
+        td = link_to 'Exibir', classroom
+        td = link_to 'Editar', edit_classroom_path(classroom)
+        td = link_to 'Apagar', classroom, data: {:confirm => 'Deseja realmente apagar?'}, :method => :delete

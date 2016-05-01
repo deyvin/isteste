@@ -1,0 +1,28 @@
+.well
+    = form_for @classroom, html: {class: 'form-horizontal'} do |f|
+      - if @classroom.errors.any?
+        #error_explanation
+          h2 = "#{pluralize(@classroom.errors.count, "error")} prohibited this classroom from being saved:"
+          ul
+            - @classroom.errors.full_messages.each do |message|
+              li = message
+
+      .form-group
+        = f.label :students_id, "Estudante", class: 'col-md-2 control-label'
+        .col-md-10
+            = f.select :students_id, Student.all.collect {|p| [ p.name, p.id ] }, {}, class: 'form-control'
+
+      .form-group
+        = f.label :courses_id, "Curso", class: 'col-md-2 control-label'
+        .col-md-10
+            = f.select :courses_id, Course.all.collect {|p| [ p.name, p.id ] }, {}, class: 'form-control'
+
+      .form-group
+        = f.label :entry_at, "Data de entrada", class: 'col-md-2 control-label'
+        .col-md-10
+            = f.datetime_select :entry_at, {}
+
+      .form-group
+        .col-md-10.col-md-offset-2
+            = f.submit "Salvar", class: 'btn btn-raised btn-success'
+            = link_to 'Voltar', classrooms_path, class: "btn btn-raised btn-default pull-right"

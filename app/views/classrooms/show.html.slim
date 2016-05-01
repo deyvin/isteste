@@ -1,0 +1,15 @@
+p#notice = notice
+.well
+    p
+      strong Estudante:
+      = @classroom.student.name
+    p
+      strong Curso:
+      = @classroom.course.name
+    p
+      strong Data Entrada:
+      = @classroom.entry_at.to_s_br
+
+    = link_to 'Editar', edit_classroom_path(@classroom), class: "btn btn-raised btn-success"
+
+    = link_to 'Voltar', classrooms_path, class: "btn btn-raised btn-default pull-right"
