@@ -4,12 +4,24 @@ RSpec.feature "students actions" do
         visit new_student_path
 
         fill_in "Nome", with: "Deyvid Nascimento"
-        fill_in "Número Registro", with: "201612345"
+        fill_in "Número Registro", with: "2016123459"
         check "student[status]"
 
         click_on("Salvar")
 
         expect(page).to have_content("cadastrado com sucesso")
+    end
+
+    scenario "invalid register_number length" do
+        visit new_student_path
+
+        fill_in "Nome", with: "Deyvid Nascimento"
+        fill_in "Número Registro", with: "2016"
+        check "student[status]"
+
+        click_on("Salvar")
+
+        expect(page).to have_content("curto")
     end
 
     scenario "user change student" do
