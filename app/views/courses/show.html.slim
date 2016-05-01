@@ -1,15 +1,15 @@
 p#notice = notice
+.well
+    p
+      strong Nome:
+      = @course.name
+    p
+      strong Descrição:
+      = @course.description
+    p
+      strong Status:
+      =  status_humanize @course.status
 
-p
-  strong Name:
-  = @course.name
-p
-  strong Description:
-  = @course.description
-p
-  strong Status:
-  = @course.status
-
-= link_to 'Edit', edit_course_path(@course)
-'|
-= link_to 'Back', courses_path
+    = link_to 'Editar', edit_course_path(@course), class: "btn btn-raised btn-success"
+    
+    = link_to 'Voltar', courses_path, class: "btn btn-raised btn-default pull-right"

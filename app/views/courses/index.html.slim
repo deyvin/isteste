@@ -4,8 +4,8 @@ h1 Cursos Cadastrados
 table class="table table-striped"
   thead
     tr
-      th Name
-      th Description
+      th Nome
+      th Descrição
       th Status
       th
       th
@@ -17,7 +17,6 @@ table class="table table-striped"
         td = course.name
         td = course.description
         td = course.status
-        td = link_to 'Show', course
-        td = link_to 'Edit', edit_course_path(course)
-        td = link_to 'Destroy', course, data: {:confirm => 'Are you sure?'}, :method => :delete
-    
+        td = link_to 'Exibir', course
+        td = link_to 'Editar', edit_course_path(course)
+        td = link_to 'Apagar', course, data: {:confirm => 'Deseja realmente apagar este curso?'}, :method => :delete
